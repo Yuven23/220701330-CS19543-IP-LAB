@@ -1,0 +1,7 @@
+<html>
+<head>
+<img src=india.jpg alt="workplace" usemap="#workmap>
+</head>
+//<map name="workmap">
+//<area shape="rect" cords
+</html>
