@@ -1,0 +1,117 @@
+<html>
+    <style>
+        body {
+            background-color: blue;
+        }
+        div {
+            display: flex;
+            justify-content: center; 
+        }
+        input, select {
+            padding: 8px;
+            font-size: 23px;
+        }
+        h1 {
+            display: flex;
+            justify-content: center;
+            color: white;
+        }
+    </style>
+    <script>
+        function val_form()
+        {
+            var b;
+            parseInt(b);
+             b=1;
+
+            let nm=document.forms["f1"]["regno"].value;
+            if(nm=="")
+        {
+            b=0;
+        }
+        let fn=document.forms["f1"]["fname"].value;
+            if(fn=="")
+        {
+            b=0;
+        }
+        let ln=document.forms["f1"]["lname"].value;
+            if(ln=="")
+        {
+            b=0;
+        }
+        let add=document.forms["f1"]["address"].value;
+            if(add=="")
+        {
+            b=0;
+        }
+        let yr=document.forms["f1"]["year"].value;
+            if(yr==" ")
+        {
+            b=0;
+        }
+            let cy=document.forms["f1"]["city"].value;
+            if(yr==" ")
+        {
+            b=0;
+        }
+        return b;
+    }    
+        function fun(){
+            var a;
+            parseInt(a);
+            a=val_form();
+            if(a==0){
+                window.alert("Please enter all the fields");
+            }
+            else{
+                window.alert("Your response is recorded");
+            }
+        }
+        
+    </script>
+    <body>
+        <h1>REGISTRATION FORM</h1>
+        <br><br>
+        <form action="Course"name="f1" method="get" onsubmit="return val_form()">
+            <div>
+                <label style="font-size: 23px;" for="reg">Reg.No:</label>
+                <input style="width:30%;" type="text" name="regno" value=" enter reg no">
+            </div>
+            <br>
+            <div>
+                <label style="font-size: 23px;" for="fname">First name:</label>
+                <input style="width:20%;" type="text" id="fname" name="fname">
+            </div>
+            <br>
+            <div>
+                <label style="font-size: 23px;" for="lname">Last Name:</label>
+                <input style="width:20%;" type="text" id="lname" name="lname">
+            </div>
+            <br>
+            <div>
+                <label style="font-size: 23px;" for="addr">Address:</label>
+                <input style="width:30%;" type="text" name="address" value="enter address">
+            </div>
+            <br>
+            <div>
+                <label style="font-size: 23px;">Year:</label>
+                <input style="width:20%;" type="text" name="year">
+            </div>
+            <br>
+            <div>
+                <label style="font-size: 23px;">Gender:</label><br>  
+                <input type="radio" name="gender" value="male"/> Male <br>  
+                <input type="radio" name="gender" value="female"/> Female <br>  
+            </div>
+            <br>
+           <div><label style="font-size:23px;">City:</label><br>
+           <input style="width:20%;"type ="text" name="city">
+           </div>
+            <br>
+            <div>
+                <input style="width:20%; font-size: 23px;" type="submit" value="SUBMIT">
+                <input style="width:20%; font-size: 23px;" type="reset" value="RESET">
+            </div>
+        </form>
+    </body>
+</html>
